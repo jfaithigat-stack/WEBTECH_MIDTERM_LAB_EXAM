@@ -1,0 +1,256 @@
+:root {
+  --navy: #2c3e50;            
+  --navy-dark: #22303f;        
+  --powder-blue: #2c3e50;      
+  --powder-light: #eaeef2;   
+  --powder-soft: #dde4ea;   
+  --powder-deep: #22303f;      
+  --powder-primary: #2c3e50;  
+  --powder-primary-dark: #1c2833;
+  --text-dark: #2c3e50;       
+  --text-muted: #5a7184;
+  --text-on-dark: #ffffff;   
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: var(--text-dark);
+  background-color: var(--powder-light);
+  padding-top: 70px; /* offset for fixed navbar */
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: var(--powder-blue) !important;
+}
+
+.navbar-brand {
+  color: var(--text-on-dark) !important;
+  font-size: 1.4rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6,
+.display-4, .section-title {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-weight: 500;
+  margin: 0 0.3rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffffff !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* ---------- Hero / Jumbotron ---------- */
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(135deg, #dde4ea 0%, #c7d3dd 100%);
+}
+
+.hero-card {
+  background-color: #ffffff;
+  box-shadow: 0 8px 30px rgba(44, 62, 80, 0.12);
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 6px 18px rgba(43, 58, 71, 0.4);
+}
+
+/* About Me photo - keep it reasonably sized */
+.about-img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ---------- Section styling ---------- */
+.section-title {
+  font-weight: 700;
+  color: var(--text-dark);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background-color: var(--powder-primary);
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+.bg-section {
+  background-color: var(--powder-soft);
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  background-color: var(--powder-primary);
+  border-color: var(--powder-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--powder-primary-dark);
+  border-color: var(--powder-primary-dark);
+}
+
+.btn-outline-primary {
+  color: var(--powder-primary-dark);
+  border-color: var(--powder-primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--powder-primary);
+  border-color: var(--powder-primary);
+  color: #fff;
+}
+
+/* ---------- Badges ---------- */
+.badge.text-bg-primary {
+  background-color: var(--powder-primary) !important;
+  margin: 2px;
+  padding: 0.5em 0.9em;
+}
+
+/* ---------- Progress bars ---------- */
+.progress {
+  height: 22px;
+  background-color: #fff;
+}
+
+.progress-bar {
+  background-color: var(--powder-primary);
+  font-weight: 500;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(90, 113, 132, 0.3) !important;
+}
+
+.text-primary {
+  color: var(--powder-primary) !important;
+}
+
+/* ---------- Gallery ---------- */
+.carousel-img {
+  height: 450px;
+  object-fit: cover;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.04);
+}
+
+/* ---------- Accordion ---------- */
+.accordion-button:not(.collapsed) {
+  background-color: var(--powder-soft);
+  color: var(--text-dark);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(90, 113, 132, 0.4);
+}
+
+/* ---------- Form ---------- */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--powder-primary);
+  box-shadow: 0 0 0 0.2rem rgba(90, 113, 132, 0.3);
+}
+
+/* ---------- Alerts ---------- */
+.alert-info {
+  background-color: var(--powder-soft);
+  border-color: var(--powder-deep);
+  color: var(--text-dark);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--powder-deep);
+  color: #ffffff;
+}
+
+.footer-icon {
+  color: #ffffff;
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer-icon:hover {
+  color: var(--powder-soft);
+  transform: translateY(-3px);
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+  }
+  .display-4 {
+    font-size: 2rem;
+  }
+  .gallery-img {
+    height: 180px;
+  }
+}
